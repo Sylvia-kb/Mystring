@@ -68,25 +68,7 @@ String::~String()
 		delete[] str;
 }
 
-String& String::insert(int p0, const char* s)
-{
-	int n = strlen(str);
-	if (p0 > n) p0 = n;
-	char* p = new char[strlen(str) + strlen(s) + 1];
-	strncpy(p, str, p0);		// 原字符串内容的第一部分
-	p[p0] = '\0';
-	strcat(p, s);				// 插入的部分
-	strcat(p, str + p0);			// 原字符串的剩余部分
-	delete[] str;				// 释放原字符串
-	str = p;					// 保存新字符串的首地址
-	return *this;
-}
 
-String String::substr(int pos, int n) const
-{
-	String temp(*this, pos, n);
-	return temp;
-}
 
 int String::find(const String& Str) const
 {
