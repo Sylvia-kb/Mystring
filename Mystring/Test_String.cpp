@@ -35,9 +35,13 @@ int main()
 	cout << "Appending the C-string cstr1a to string str1 gives: "
 		<< str1a << "." << endl << endl;
 
+	//异常处理：方括号运算时下标越界
+	str1[100] = 'a';
+
 	cout << "Input a string: ";
 	getline(cin, str1, 80);
 	cout << "\"" << str1 << "\"" << endl;
 
+	
 	return 0;
 }

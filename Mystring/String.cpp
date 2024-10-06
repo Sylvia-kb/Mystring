@@ -138,10 +138,23 @@ String& String::append(const char* s)
 	return *this;
 }
 
-char& String::operator[](int index)		// 重载方括号运算符
+char& String::operator[](int index) throw(int)	// 重载方括号运算符
 {
+	int len = strlen(str);
+	try 
+	{
+		if (index < 0 || index >= len)
+			throw (int)1;
+	}
+	catch (int)
+	{
+		cout << "下标越界" << endl;
+	}
+	
+	
 	return str[index];
 }
+
 
 String operator+(const String& Str1, const String& Str2)
 {
