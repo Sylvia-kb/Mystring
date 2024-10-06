@@ -15,7 +15,8 @@ public:
 	String& operator=(const String& Str);			// 必须为成员函数
 	virtual ~String();								// 析构函数（虚函数）
 
-	
+	String& insert(int p0, const char* s);			// 将 s 所指向的字符串插入在本串位置 p0 之前
+	String substr(int pos, int n) const;			// 取子串，取本串位置 pos 开始的 n 个字符，构成新对象
 	int find(const String& Str) const;				// 查找并返回 Str 在本串中第一次出现的位置
 	int length() const;							// 返回串的长度（字符个数）
 	const char* c_str();							// 转换为 C-字符串
