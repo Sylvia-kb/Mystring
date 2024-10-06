@@ -108,6 +108,18 @@ void String::swap(String& Str)
 	str = temp;
 }
 
+void String::clear()
+{
+	*this = "\0";
+}
+
+String& String::append(const char* s)
+{
+	String temp(s);
+	*this += temp;
+	return *this;
+}
+
 char& String::operator[](int index)		// 重载方括号运算符
 {
 	return str[index];
