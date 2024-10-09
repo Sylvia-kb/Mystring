@@ -86,6 +86,7 @@ int main()
 		<< str1a << "." << endl << endl;
 	cout << "" << endl;
 	//异常处理：方括号运算时下标越界
+	cout << "下标越界测试: " << endl;
 	str1[100] = 'a';
 
 	cout << "Input a string: ";
