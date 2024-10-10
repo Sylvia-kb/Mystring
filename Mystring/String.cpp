@@ -158,17 +158,7 @@ String& String::erase(int pos, int n)
 char& String::operator[](int index) throw(int)	// 重载方括号运算符
 {
 	int len = strlen(str);
-	try 
-	{
-		if (index < 0 || index >= len)
-			throw (int)1 ;
-	}
-	catch (int)
-	{
-		cout << "下标越界" << endl;
-	}
-	
-	
+	if (index < 0 || index >= len) throw (int)1 ;
 	return str[index];
 }
 
