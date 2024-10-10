@@ -23,10 +23,11 @@ int main()
 
 	//异常处理：方括号运算时下标越界
 	cout << "方括号运算下标越界测试: " << endl;
-	cout << "输出str2：" << str2 << endl;
+	cout << "str2=" << str2 << endl;
 	try
 	{
-		cout << "输出str2[100]" << str2[100] << endl;
+		cout << "输出str2[100]" << endl;
+		cout << str2[100] << endl;
 	}
 	catch (int)
 	{
@@ -111,9 +112,9 @@ int main()
 
 	//clear测试
 	cout << "clear测试: " << endl;
-	cout << "\"" << str4 << "\"" << endl;
+	cout << "原始字符串：" << "\"" << str4 << "\"" << endl;
 	str4.clear();
-	cout << "\"" << str4 << "\"" << endl;
+	cout << "清空后字符串：" << "\"" << str4 << "\"" << endl;
 	cout << "" << endl;
 
 	//append测试
@@ -137,6 +138,20 @@ int main()
 	cout << "删除从字符串str5的位置20开始的往后20个字符(位置越界)" << endl;
 	str6.erase(20, 20);
 	cout << "删除后的字符串:" << str6 << endl;
+	cout << "" << endl;
+
+	//重载关系运算符测试
+	cout << "重载关系运算符测试:" << endl;
+	String str7 = "Hello";
+	String str8 = "World";
+	cout << "str7=" << "\"" << str7 << "\"" << endl;
+	cout << "str8=" << "\"" << str8 << "\"" << endl;
+	cout << "str7 == str8: " << (str7 == str8) << endl;
+	cout << "str7 != str8: " << (str7 != str8) << endl;
+	cout << "str7 > str8: " << (str7 > str8) << endl;
+	cout << "str7 >= str8: " << (str7 >= str8) << endl;
+	cout << "str7 < str8: " << (str7 < str8) << endl;
+	cout << "str7 <= str8: " << (str7 <= str8) << endl;
 	cout << "" << endl;
 
 	
