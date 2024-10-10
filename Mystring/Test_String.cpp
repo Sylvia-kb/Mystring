@@ -21,6 +21,8 @@ int main()
 
 	cout << &(str1[0]) << endl;
 	cout << "" << endl;
+
+
 	//insert²âÊÔ
 	cout << "insert²âÊÔ:" << endl;
 	String str5 = "welcome to ";
@@ -29,6 +31,7 @@ int main()
 	str5.insert(10, text_to_insert);
 	cout << "²åÈëºóµÄ×Ö·û´®: " << str5 << endl;
 	cout << "" << endl;
+
 	//substr²âÊÔ
 	cout << "substr²âÊÔ:" << endl;
 	cout << "Ô­Ê¼×Ö·û´®: " << str2 << endl;
@@ -37,6 +40,7 @@ int main()
 	String result = str2.substr(pos, n);
 	cout << "ÌáÈ¡µÄ×Ö·û´®: " << result << endl;
 	cout << "" << endl;
+
 	//find²âÊÔ
 	cout << "find²âÊÔ: " << endl;
 	String s("Hello, World! Welcome to the C++ programming world.");
@@ -58,6 +62,7 @@ int main()
 		cout << "Î´ÕÒµ½×Ó×Ö·û´® \"" << toFind2 << "\"¡£" << endl;
 	}
 	cout << "" << endl;
+
 	//swap²âÊÔ
 	cout << "swap²âÊÔ: " << endl;
 	String s1 = "English";
@@ -69,12 +74,14 @@ int main()
 	cout << "s1: " << s1 << endl;
 	cout << "s2: " << s2 << endl;
 	cout << "" << endl;
+
 	//clear²âÊÔ
 	cout << "clear²âÊÔ: " << endl;
 	cout << "\"" << str4 << "\"" << endl;
 	str4.clear();
 	cout << "\"" << str4 << "\"" << endl;
 	cout << "" << endl;
+
 	//append²âÊÔ
 	cout << "append²âÊÔ: " << endl;
 	string str1a("Hello ");
@@ -85,14 +92,23 @@ int main()
 	cout << "Appending the C-string cstr1a to string str1 gives: "
 		<< str1a << "." << endl << endl;
 	cout << "" << endl;
+
+	//erase²âÊÔ
+	cout << "erase²âÊÔ" << endl;
+	String s5 = "Hello,world!";
+	cout << "Ô­Ê¼×Ö·û´®£º" << s5 << endl;
+	s5.erase(20, 20);
+	cout << "É¾³ıºóµÄ×Ö·û´®:" << s5 << endl;
+	cout << "" << endl;
+
 	//Òì³£´¦Àí£º·½À¨ºÅÔËËãÊ±ÏÂ±êÔ½½ç
 	cout << "ÏÂ±êÔ½½ç²âÊÔ: " << endl;
 	str1[100] = 'a';
+	cout << "" << endl;
 
 	cout << "Input a string: ";
 	getline(cin, str1, 80);
 	cout << "\"" << str1 << "\"" << endl;
-
 
 	return 0;
 }

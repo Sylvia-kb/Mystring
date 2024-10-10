@@ -138,13 +138,30 @@ String& String::append(const char* s)
 	return *this;
 }
 
+String& String::erase(int pos, int n)
+{
+	int m;
+	m = strlen(str);
+	if (pos > m)
+	{
+		cout << "位置越界,字符串不改变" << endl;
+		return *this;
+	}
+	if (m - pos < n) n = m - pos;
+	if (n < 0) n = 0;
+	String temp1(*this, 0, pos);
+	String temp2(*this, pos+n,m-pos-n);
+	*this = temp1 + temp2;
+	return *this;
+}
+
 char& String::operator[](int index) throw(int)	// 重载方括号运算符
 {
 	int len = strlen(str);
 	try 
 	{
 		if (index < 0 || index >= len)
-			throw (int)1;
+			throw (int)1 ;
 	}
 	catch (int)
 	{

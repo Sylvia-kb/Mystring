@@ -23,7 +23,7 @@ public:
 	void swap(String& Str);							// 将本串与 Str 交换
 	void clear();									// 清空String
 	String& append(const char* s);                  //向字符串的末尾添加字符
-
+	String& erase(int pos, int n);                  //删除从字符串中的位置pos开始的往后n个字符
 
 	char& operator[](int index);					// 方括号（下标）运算符。引用返回可作左值、右值
 	friend String operator+(const String& str1, const String& Str2); // 友元函数，字符串拼接
